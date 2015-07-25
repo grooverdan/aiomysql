@@ -13,10 +13,19 @@ matrix:
    include:
      - addons:
         mariadb: 5.5
+        python:
+          - 3.3
+          - 3.4
      - addons:
         mariadb: 10.0
+        python:
+          - 3.3
+          - 3.4
      - addons:
         mariadb: 10.1
+        python:
+          - 3.3
+          - 3.4
 
 
 before_script:
