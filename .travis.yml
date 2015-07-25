@@ -4,27 +4,23 @@ python:
    - 3.3
    - 3.4
 
+env:
+    matrix:
+        - PYTHONASYNCIODEBUG=1
+        - PYTHONASYNCIODEBUG=0
+
 matrix:
    include:
-     - python:
-          - 3.3
-       env:
-          - PYTHONASYNCIODEBUG=1
-          - PYTHONASYNCIODEBUG=0
+     - python: 3.3
+       env: PYTHONASYNCIODEBUG=1
        addons:
           mariadb: 5.5
-     - python:
-          - 3.4
-       env:
-          - PYTHONASYNCIODEBUG=1
-          - PYTHONASYNCIODEBUG=0
+     - python: 3.4
+       env: PYTHONASYNCIODEBUG=1
        addons:
           mariadb: 10.0
-     - python:
-          - 3.4
-       env:
-          - PYTHONASYNCIODEBUG=1
-          - PYTHONASYNCIODEBUG=0
+     - python: 3.4
+       env: PYTHONASYNCIODEBUG=0
        addons:
           mariadb: 10.1
 
