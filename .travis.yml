@@ -1,14 +1,5 @@
 language: python
 
-python:
-    - 3.3
-    - 3.4
-
-env:
-    matrix:
-        - PYTHONASYNCIODEBUG=1
-        - PYTHONASYNCIODEBUG=0
-
 matrix:
    include:
      - addons:
@@ -30,6 +21,12 @@ matrix:
      - addons:
           mariadb: 10.0
        python:
+          - 3.3
+          - 3.4
+       env:
+          - PYTHONASYNCIODEBUG=1
+          - PYTHONASYNCIODEBUG=0
+     - python:
           - 3.3
           - 3.4
        env:
